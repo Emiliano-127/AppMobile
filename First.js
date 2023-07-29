@@ -22,7 +22,7 @@ export default function First(){
                 
             />
 
-            <Button title={'Enviar'}/>
+            <Button title={'Login'}/>
 
             
         </View>
