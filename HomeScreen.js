@@ -26,7 +26,10 @@ export default function HomeScreen({navigation}){
             borderRadius = {100 } />
           
         </View>
-        <Text style={styles.text}>Você não tem uma conta?             Sign-Up</Text>
+        <Text style={styles.text}>Você não tem uma conta? </Text>
+        <Button title={'Sign-Up'} onPress={()=>navigation.navigate('Second')}
+        color = "blue"
+        borderRadius= {100} />
         <StatusBar style="auto" />
       </View>
       
