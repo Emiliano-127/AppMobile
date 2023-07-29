@@ -7,8 +7,11 @@ export default function First(){
 
     return(
         <View style={styles.container}>
+
+            <Text style={styles.text}>Olá, seja bem-vindo!</Text>
+
             <TextInput 
-                style ={{height: 30, width: '80%', borderColor: 'red', borderBottomWidth: 3}}
+                style ={{height: 30, width: '80%', borderColor: 'red', borderBottomWidth: 3, margin:50}}
                 placeholder="Email" 
                 
             />
@@ -55,4 +58,9 @@ const styles = StyleSheet.create({
         color: "blue",
     },
 
+    text:{
+        margin: 30,
+        color: "red",
+        
+    }
 });
