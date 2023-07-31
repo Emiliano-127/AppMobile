@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, requireNativeComponent, Button } from 'react-native';
+import { Link } from '@react-navigation/native';
 
 
 export default function HomeScreen({navigation}){
@@ -26,10 +27,8 @@ export default function HomeScreen({navigation}){
             borderRadius = {100 } />
           
         </View>
-        <Text style={styles.text}>Você não tem uma conta? </Text>
-        <Button title={'Sign-Up'} onPress={()=>navigation.navigate('Second')}
-        color = "blue"
-        borderRadius= {100} />
+        <Text style={styles.text}>Você não tem uma conta?         <Link to ='/Blood'>Sign-Up</Link> </Text>
+        
         <StatusBar style="auto" />
       </View>
       

@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
 import First from './First';
 import Second from './Second';
+import Blood from './Blood';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +21,9 @@ export default function App() {
         <Stack.Screen name = "Home" component={HomeScreen} />
         <Stack.Screen name = "First" component={First} />
         <Stack.Screen name = "Second" component={Second} />
+
+        <Stack.Screen name = "Blood" component={Blood} />
+       
 
       </Stack.Navigator>
     </NavigationContainer>
