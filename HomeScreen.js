@@ -27,7 +27,7 @@ export default function HomeScreen({navigation}){
             borderRadius = {100 } />
           
         </View>
-        <Text style={styles.text}>Você não tem uma conta?         <Link to ='/Blood'>Sign-Up</Link> </Text>
+        <Text style={styles.text}>Você não tem uma conta?         <Link to ='/MultipleCheckBox'>Sign-Up</Link> </Text>
         
         <StatusBar style="auto" />
       </View>

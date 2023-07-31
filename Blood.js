@@ -18,20 +18,21 @@ const Blood = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ fontSize: 20 }}>Selecione seu tipo de sangue</Text>
-      <View style={{ flexDirection: "row"}}>
+      <View style={{ flexDirection: "column"}}>
         {options.map((option) => (
           <TouchableOpacity
             key={option.id}
             onPress={() => setSelected(option.id)}
             style={{
+              alignItems: "center",
               borderWidth: 1,
               borderColor: selected === option.id ? '#000' : '#fff',
               paddingVertical: 10,
               paddingHorizontal: 20,
               marginVertical: 10,
-              borderRadius: 50,
-              backgroundColor: "red",
-              marginRight: 10
+              backgroundColor: "blue",
+              borderRadius: 10,
+             
             }}
           >
             <Text>{option.name}</Text>
