@@ -10,7 +10,7 @@ import Blood from './Blood';
 import MultipleCheckBox from './MultipleCheckBox';
 import { ReactComponentElement } from 'react';
 
-//<Stack.Screen name = "Blood" component={Blood} />
+//<Stack.Screen name = "MultipleCheckBox" component={MultipleCheckBox} />
 
 const Stack = createNativeStackNavigator();
 
@@ -24,8 +24,8 @@ export default function App() {
         <Stack.Screen name = "First" component={First} />
         <Stack.Screen name = "Second" component={Second} />
 
+        <Stack.Screen name = "Blood" component={Blood} />
         
-        <Stack.Screen name = "MultipleCheckBox" component={MultipleCheckBox} />
        
 
       </Stack.Navigator>
