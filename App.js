@@ -25,8 +25,7 @@ export default function App() {
         <Stack.Screen name = "Second" component={Second} />
 
         <Stack.Screen name = "Blood" component={Blood} />
-        heree aqui
-       
+        
 
       </Stack.Navigator>
     </NavigationContainer>
