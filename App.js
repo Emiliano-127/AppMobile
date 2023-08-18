@@ -7,7 +7,7 @@ import HomeScreen from './HomeScreen';
 import First from './First';
 import Second from './Second';
 import Blood from './Blood';
-import MultipleCheckBox from './MultipleCheckBox';
+//import MultipleCheckBox from './MultipleCheckBox';
 import { ReactComponentElement } from 'react';
 
 //<Stack.Screen name = "MultipleCheckBox" component={MultipleCheckBox} />
