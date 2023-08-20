@@ -1,46 +1,103 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, TouchableHighlight } from 'react-native';
+import React from 'react';
 
-const Blood = () => {
-  const [selected, setSelected] = useState(null);
+export default function  Blood({navigation}) {
 
-  const options = [
-    { id: 1, name: 'A+' },
-    { id: 2, name: 'O+' },
-    { id: 3, name: 'B+' },
-    { id: 4, name: 'AB+' },
-    { id: 5, name: 'A-' },
-    { id: 6, name: 'O-' },
-    { id: 7, name: 'B-' },
-    { id: 8, name: 'AB-' },
+  const tabela1 = [
+    <React.Fragment key="tabela1">
+      <TouchableOpacity key="o-" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.maiores} source={require('./assets/o-.jpg')}/>
+      </TouchableOpacity>
+      <TouchableOpacity key="B2" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.maiores} source={require('./assets/B2.jpg')}/>
+      </TouchableOpacity>
+      <TouchableOpacity key="a-" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.maiores} source={require('./assets/a-.jpg')}/>
+      </TouchableOpacity>
+    </React.Fragment>
   ];
 
+  const tabela2 = [
+    <React.Fragment key="tabela2">
+      <TouchableOpacity key="04"onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.imagens} source={require('./assets/04.jpg')}/>
+      </TouchableOpacity>
+      <TouchableOpacity key="05" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.imagens} source={require('./assets/05.jpg')}/>
+      </TouchableOpacity>
+      <TouchableOpacity key="03" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.imagens} source={require('./assets/03.jpg')}/>
+      </TouchableOpacity>
+    </React.Fragment>
+  ];
+
+  const tabela3 = [
+    <React.Fragment key="tabela3">
+      <TouchableOpacity key="02"onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.imagens} source={require('./assets/02.jpg')}/>
+      </TouchableOpacity>
+      <TouchableOpacity key="08" onPress={()=>navigation.navigate('City')}>
+        <Image  style={styles.imagens} source={require('./assets/08.jpg')}/>
+      </TouchableOpacity>
+    </React.Fragment>
+  ];
+
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text style={{ fontSize: 20 }}>Selecione seu tipo de sangue</Text>
-      <View style={{ flexDirection: "column"}}>
-        {options.map((option) => (
-          <TouchableOpacity
-            key={option.id}
-            onPress={() => setSelected(option.id)}
-            style={{
-              alignItems: "center",
-              borderWidth: 1,
-              borderColor: selected === option.id ? '#000' : '#fff',
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-              marginVertical: 10,
-              backgroundColor: "blue",
-              borderRadius: 10,
-             
-            }}
-          >
-            <Text>{option.name}</Text>
-          </TouchableOpacity>
-        ))}
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "white" }}>
+      <Text style={styles.texto}>Selecione seu tipo de sangue</Text>
+
+      <View style={{ flexDirection: "row"}}>
+        {tabela1}
+      </View>
+
+      <View style={{flexDirection: "row"}}>
+        {tabela2}
+      </View>
+
+      <View style={{flexDirection: "row"}}>
+        {tabela3}
       </View>
     </View>
   );
 };
 
-export default Blood;
+const styles = StyleSheet.create({
+  imagens:{
+    width: 90,
+    height: 90,
+    borderRadius: 50,
+    margin: 20,
+    padding: 30,
+    borderColor: 'red',
+    borderWidth: 5,
+    
+  },
+  maiores:{
+    width: 90,
+    height: 90,
+    borderRadius: 50,
+    margin: 20,
+    padding: 40,
+    borderColor: 'red',
+    borderWidth: 5,
+    alignItems: 'center',
+    
+  },
+
+  texto:{
+    
+    fontSize: 23, 
+    fontStyle:'italic',
+    fontWeight:'bold', 
+    color:'red',
+    paddingBottom: 10,
+    margin: 15,
+    justifyContent:'center'
+    
+    
+    
+  }
+})
+
+

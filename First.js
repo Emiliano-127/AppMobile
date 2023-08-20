@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 
 
-export default function First(){
+export default function First({navigation}){
 
     return(
         <View style={styles.container}>
@@ -22,7 +22,7 @@ export default function First(){
                 
             />
 
-            <Button title={'Login'}/>
+            <Button title={'Login'} onPress={()=>navigation.navigate('Blood')}/>
 
             
         </View>

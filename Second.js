@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-export default function Second(){
+export default function Second({navigation}){
 
     return(
         <View style={styles.container}>
@@ -24,7 +24,7 @@ export default function Second(){
                 
             />
 
-            <Button title={'Sign-Up'}/>
+            <Button title={'Sign-Up'} onPress={() => navigation.navigate('Blood')}/>
 
         </View>
     );

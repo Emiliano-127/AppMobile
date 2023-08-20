@@ -7,6 +7,7 @@ import HomeScreen from './HomeScreen';
 import First from './First';
 import Second from './Second';
 import Blood from './Blood';
+import City from './City';
 //import MultipleCheckBox from './MultipleCheckBox';
 import { ReactComponentElement } from 'react';
 
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name = "Second" component={Second} />
 
         <Stack.Screen name = "Blood" component={Blood} />
+        <Stack.Screen name = "City" component={City} />
         
 
       </Stack.Navigator>
